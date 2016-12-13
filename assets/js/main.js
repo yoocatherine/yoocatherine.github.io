@@ -249,7 +249,6 @@ const $grid = $('.grid').masonry({
 	columnWidth: 260
 });
 
-//
 // var $grid = $('.grid');
 // $grid.imagesLoaded().progress( function() {
 // 	$('.grid').masonry({

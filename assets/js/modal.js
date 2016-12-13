@@ -45,11 +45,13 @@ function getIndex(array, el){
 }
 
 function handleClick(){
-  modal.style.display = "block";
-  const idx = getIndex(window.images, this);
-  window.idx = idx;
-  updateImage();
-  updateArrows();
+  if(screen.width > 500){
+    modal.style.display = "block";
+    const idx = getIndex(window.images, this);
+    window.idx = idx;
+    updateImage();
+    updateArrows();
+  }
 }
 
 function handleNext(){
