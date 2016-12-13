@@ -3,15 +3,20 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-var $grid = $('.grid').masonry({
-	// options
-	itemSelector: '.grid-item',
-	fitWidth: true,
-	columnWidth: 260
-});
+var pictureHeight = 1600;
 
 (function($) {
+	var $grid = $('.grid');
+	$grid.masonry({
+		// options
+		itemSelector: '.grid-item',
+		stagger: 50,
+		fitWidth: true
+	});
+
+	$grid.imagesLoaded().always(() => {
+		$grid.masonry('layout');
+	});
 
 	var settings = {
 
@@ -116,7 +121,7 @@ var $grid = $('.grid').masonry({
 							// Change nav link (if it exists).
 								$nav_links.removeClass('active');
 								$nav_links.filter('[href="#' + id + '"]').addClass('active');
-
+								if(id === 'work'){ $("#work").height(pictureHeight); }
 							// Change hash.
 								if (i == 0)
 									window.location.hash = '#';
@@ -244,9 +249,13 @@ var $grid = $('.grid').masonry({
 
 			});
 
+			window.onhashchange = () => {
+				$('#work').height(pictureHeight);
+				if(window.location.hash === "#work"){
+					window.setTimeout(() => {
+						$grid.masonry('layout');
+					}, 1000);
+				}
+			};
 	});
 })(jQuery);
-
-$("#nav .icon").on("click", () => {
-	$grid.masonry('reloadItems');
-});

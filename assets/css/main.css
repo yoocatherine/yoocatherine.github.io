@@ -1560,12 +1560,12 @@
 .grid{
 	margin: 0 auto;
 }
-.grid:after{
+
+.clrfix:after{
 	content: '';
 	display: block;
 	clear: both;
 }
-
 
 .grid-item{
 	float: left;
