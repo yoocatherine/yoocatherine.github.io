@@ -82,6 +82,7 @@ leftArrow.onclick = handleBack;
 const span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
+
 span.onclick = function() {
   modal.style.display = "none";
 };
@@ -95,6 +96,9 @@ document.onkeydown = function(event) {
        code = event.charCode;
      }
      switch(code) {
+          case 27:
+              modal.style.display = "none";
+              break;
           case 37:
               handleBack();
               break;
