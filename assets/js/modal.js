@@ -4,7 +4,6 @@ const modal = document.getElementById('imgModal');
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 const images = document.getElementsByClassName('image');
 const modalImg = document.getElementById("zoomedImg");
-const captionText = document.getElementById("caption");
 const leftArrow = document.getElementById("modalLeft");
 const rightArrow = document.getElementById("modalRight");
 window.images = Array.prototype.slice.call(images);
@@ -36,7 +35,6 @@ function updateArrows(){
 function updateImage(){
   const image = window.images[window.idx].childNodes[0];
   modalImg.src = image.src;
-  captionText.innerHTML = image.alt;
 }
 
 function getIndex(array, el){
@@ -102,5 +100,4 @@ document.onkeydown = function(event) {
               handleNext();
               break;
      }
-     event.preventDefault();
 };
