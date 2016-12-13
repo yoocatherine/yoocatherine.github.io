@@ -1415,6 +1415,23 @@
 		clear: both;
 	}
 
+	.grid{
+		margin: 0 auto;
+	}
+
+	.clrfix:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	.grid-item{
+		float: left;
+		width: 250px;
+		padding: 0;
+		margin: 0 5px;
+	}
+
 /* Mobile */
 
 	@media screen and (max-width: 736px) {
@@ -1553,23 +1570,11 @@
 				}
 
 		.image{
+			width: 100%;
 			height: auto;
-			max-height: 300px;
+		}
+
+		.grid-item{
+			width: 350px;
 		}
 	}
-.grid{
-	margin: 0 auto;
-}
-
-.clrfix:after{
-	content: '';
-	display: block;
-	clear: both;
-}
-
-.grid-item{
-	float: left;
-	width: 250px;
-	padding: 0;
-	margin: 0 5px;
-}
