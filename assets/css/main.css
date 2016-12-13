@@ -909,6 +909,24 @@
 		color: #aaa;
 	}
 
+	h5{
+		padding-right: 7px;
+	}
+	.word1{
+		display: inline-block;
+		color: #E5AD9C;
+	}
+
+	.word2{
+		display: inline-block;
+		color: #C68883;
+	}
+
+	.word3{
+		display: inline-block;
+		color: #875C79;
+	}
+
 /* Image */
 
 	.image {
