@@ -4,6 +4,13 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+var $grid = $('.grid').masonry({
+	// options
+	itemSelector: '.grid-item',
+	fitWidth: true,
+	columnWidth: 260
+});
+
 (function($) {
 
 	var settings = {
@@ -28,7 +35,6 @@
 	var $window = $(window);
 
 	$window.on('load', function() {
-
 		skel
 			.breakpoints({
 				desktop: '(min-width: 737px)',
@@ -239,26 +245,8 @@
 			});
 
 	});
-
 })(jQuery);
 
-
-const $grid = $('.grid').masonry({
-	itemSelector: '.grid-item',
-	fitWidth: true,
-	columnWidth: 260
-});
-
-// var $grid = $('.grid');
-// $grid.imagesLoaded().progress( function() {
-// 	$('.grid').masonry({
-// 		// options
-// 		itemSelector: '.grid-item',
-// 		fitWidth: true,
-// 		columnWidth: 260
-// 	});
-// });
-
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
+$("#nav .icon").on("click", () => {
+	$grid.masonry('reloadItems');
 });
