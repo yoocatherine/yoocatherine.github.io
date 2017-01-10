@@ -3,7 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-var pictureHeight = 1750;
+var pictureHeight = 1650;
 
 (function($) {
 	var $grid = $('.grid');
