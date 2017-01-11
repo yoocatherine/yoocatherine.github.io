@@ -1,0 +1,2 @@
+NUM_PICS = 24;
+MAX_HEIGHT = 1800;
